@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>VT-Intrinsic</title>
+  <title>VT-Intrinsic | CVPR 2026</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
   rel="stylesheet">
@@ -55,26 +55,54 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-2 publication-title" style="font-family: 'Inter', sans-serif; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.1); line-height: 1.2; letter-spacing: -0.02em;">
-              <span style="color: #ffb157; font-weight: 700; text-shadow: 0 0 10px rgba(255,221,87,0.3);">V</span><span style="color: #ff3860; font-weight: 700; text-shadow: 0 0 10px rgba(255,56,96,0.3);">T</span><span style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">-Intrinsic</span>: 
-              <span style="font-weight: 400; color: #4a4a4a;">Physics-based Decomposition of Reflectance and Shading from</span><br>
-              <span style="font-weight: 400; color: #4a4a4a;">a Single</span> <span style="color: #ffb157; font-weight: 600; text-shadow: 0 0 8px rgba(255,221,87,0.2);">V</span><span style="color: #4a4a4a; font-weight: 400;">isible-</span><span style="color: #ff3860; font-weight: 600; text-shadow: 0 0 8px rgba(255,56,96,0.2);">T</span><span style="color: #4a4a4a; font-weight: 400;">hermal Image Pair</span>
+              <span style="color: #ffb157; font-weight: 700; text-shadow: 0 0 2px rgba(255,221,87,0.3);">V</span><span style="color: #ff3860; font-weight: 700; text-shadow: 0 0 10px rgba(255,56,96,0.3);">T</span><span style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">-Intrinsic</span>: 
+              <span style="font-weight: 500; color: #4a4a4a;">Physics-based Decomposition of Reflectance and Shading from</span><br>
+              <span style="font-weight: 500; color: #4a4a4a;">a Single</span> <span style="background: linear-gradient(135deg, #ffb157 0%, #ff6b35 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;"><b>V</b>isible</span><span style="color: #4a4a4a; font-weight: 500;">-</span><span style="background: linear-gradient(135deg, #f92e57 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;"><b>T</b>hermal</span><span style="color: #4a4a4a; font-weight: 500;"> Image Pair</span>
             </h1>
+            <style>
+              .author-link {
+                color: #C41230 !important;
+                text-decoration: none;
+                font-weight: 500;
+                transition: opacity 0.2s ease;
+              }
+              .author-link:hover {
+                opacity: 0.7;
+              }
+              .external-link.button.is-dark {
+                background-color: #a15965 !important;
+                border-color: transparent !important;
+                color: #fff !important;
+                font-weight: 500;
+                letter-spacing: 0.02em;
+                transition: background-color 0.2s ease, transform 0.15s ease;
+              }
+              .external-link.button.is-dark:hover {
+                background-color: #9c4e5b !important;
+                transform: translateY(-1px);
+              }
+            </style>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://zqyuan.com" target="_blank">Zeqing Leo Yuan</a>,</span>
-                <span class="author-block">
-                  <a href="https://marvils.org/mani" target="_blank">Mani Ramanagopal</a>,</span>
-                  <span class="author-block">
-                    <a href="https://users.ece.cmu.edu/~saswin/" target="_blank">Aswin C. Sankaranarayanan</a>,</span>
+              <span class="author-block" style="margin-right: 1.5rem;">
+                <a href="https://zqyuan.com" target="_blank" class="author-link">Zeqing Leo Yuan</a></span>
+                <span class="author-block" style="margin-right: 1.5rem;">
+                  <a href="https://marvils.org/mani" target="_blank" class="author-link">Mani Ramanagopal</a></span>
+                  <span class="author-block" style="margin-right: 1.5rem;">
+                    <a href="https://users.ece.cmu.edu/~saswin/" target="_blank" class="author-link">Aswin C. Sankaranarayanan</a></span>
                     <span class="author-block">
-                    <a href="https://www.cs.cmu.edu/~srinivas/" target="_blank">Srinivasa G. Narasimhan</a>
+                    <a href="https://www.cs.cmu.edu/~srinivas/" target="_blank" class="author-link">Srinivasa G. Narasimhan</a>
                   </span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Carnegie Mellon University<br></span>
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  <!-- <div class="is-size-4 publication-authors">
+                    <span class="author-block">Carnegie Mellon University<br></span> -->
+                  <div class="publication-authors" style="margin-top: 1rem;">
+                    <span class="author-block"><img src="static/images/CMU.png" alt="Carnegie Mellon University" style="height: 2rem;"></span>  
+                  </div>
+
+                  <div class="is-size-3 publication-authors">
+                    <span class="author-block" style="color: #ba6724; letter-spacing: 0.03em; font-weight: 500;">CVPR 2026</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -155,32 +183,32 @@
 
 
 <!-- Teaser-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
+<section class="hero teaser" style="padding-top: 0rem;">
+  <div class="container is-max-widescreen">
+    <div class="hero-body" style="padding-top: 0rem; padding-bottom: 0;">
        <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1.2rem; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); margin: 0.5rem 0 2rem 0;">
         
         <div style="text-align: center; margin-bottom: 1rem;">
-          <h2 class="subtitle" style="font-family: 'Inter', sans-serif; font-style: italic; color: #5a5a5a; font-size: 1.3rem; margin-bottom: 0; font-weight: 300; letter-spacing: 0.01em;">
-            "Absence, the highest form of presence."
+          <h2 class="subtitle" style="font-family: 'Inter', sans-serif; font-style: italic; color: #5a5a5a; font-size: 1.4rem; margin-bottom: 0; font-weight: 400; letter-spacing: 0.01em;">
+            "<b>Absence</b>, the highest form of <b>presence</b>."
           </h2>
-          <p style="font-family: 'Inter', sans-serif; color: #888; font-size: 1rem; margin-top: 0.5rem; font-weight: 400;">— James Joyce</p>
+          <p style="font-family: 'Inter', sans-serif; color: #888; font-size: 1.1rem; margin-top: 0.5rem; font-weight: 400;">— James Joyce</p>
         </div>
 
         <!-- Teaser Image -->
         <div style="text-align: center; margin-bottom: 1rem;">
           <img src="static/images/VT-Intrinsic_webpage_teaser.png" alt="VT-Intrinsic Method Overview" 
-               style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+               style="width: 95%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
         </div>
 
         <!-- Description -->
-        <div style="text-align: center; max-width: 900px; margin: 0 auto;">
-           <p style="font-family: 'Inter', sans-serif; font-size: 1.12rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 1rem; font-weight: 400;">
-             Decomposing scene appearance into reflectance (material albedo) and shading (incident illumination) is a fundamental challenge in computer vision.
-             What is <i>absent</i> in the visible image—absorbed light—manifests as heat in the thermal spectrum 
-             and <i>presents</i> complementary cues for intrinsic decomposition.
-             Our method exploits this energy conservation principle through ordinality theory 
-             to achieve decomposition from a single visible-thermal image pair without learned priors.
+        <div style="text-align: center; max-width: 1200px; margin: 0 auto;">
+           <p style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 1rem; font-weight: 400;">
+             <b>TL;DR:</b> Decomposing scene appearance into reflectance (material albedo) and shading (incident illumination) is a fundamental challenge in vision.
+             What is <i><b>absent</b></i> in the visible image—light not reflected by the scene—is absorbed and manifests as heat in the thermal spectrum, 
+             which <i><b>presents</b></i> disambiguating cues for the decomposition.
+             This work studies the energy conservation in light-heat transport 
+             and proposes an ordinality-based theory for intrinsic image decomposition to exploit the physics-based cues in an auxiliary thermal image.
            </p>
         </div>
         
@@ -289,7 +317,7 @@
     <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Interactive Ordinality Demo</h2>
     <div class="mt-4">
       <div id="ordinality-info" class="has-text-centered">
-        <p class="subtitle is-5" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">Click two points on the image to explore albedo/shading ordinalities, derived purely from visible-thermal ordinalities.</p>
+        <p class="subtitle is-5" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">Click two points on the image to explore albedo/shading ordinalities, derived purely from the ordinalities of visible-thermal intensities.</p>
         <div id="point-info" class="is-hidden">
           <p><span id="point-a-coords"></span></p>
           <p><span id="point-b-coords"></span></p>
@@ -437,12 +465,13 @@
             <i class="fas fa-copy"></i>
           </span>
         </button>
-        <pre id="citation-text" style="font-family: 'JetBrains Mono', monospace; margin: 0; padding-right: 50px; background: none; border: none; font-size: 0.9rem; line-height: 1.4;"><code>@article{yuan2025vt-intrinsic,
-          title={Physics-Based Decomposition of Reflectance and Shading using a Single Visible-Thermal Image Pair}, 
-          author={Zeqing Leo Yuan and Mani Ramanagopal and Aswin C. Sankaranarayanan and Srinivasa G. Narasimhan},
-          year={2025},
-          journal = {arXiv}, 
-    }</code></pre>
+        <pre id="citation-text" style="font-family: 'JetBrains Mono', monospace; margin: 0; padding-right: 50px; background: none; border: none; font-size: 0.9rem; line-height: 1.4;"><code>@inproceedings{yuan2025vt-intrinsic,
+  title = {Physics-Based Decomposition of Reflectance and Shading using a Single Visible-Thermal Image Pair}, 
+  author = {Zeqing Leo Yuan and Mani Ramanagopal and Aswin C. Sankaranarayanan and Srinivasa G. Narasimhan},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year = {2026} 
+}
+        </code></pre>
       </div>
     </div>
   </section>
@@ -457,7 +486,6 @@
 
           <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #6c757d; font-weight: 400;">
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            </a>.
           </p>
 
         </div>
