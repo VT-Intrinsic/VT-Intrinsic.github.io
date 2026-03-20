@@ -10,10 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const pointACoords = document.getElementById('point-a-coords');
   const pointBCoords = document.getElementById('point-b-coords');
   const ordinalityResult = document.getElementById('ordinality-result');
-  // const visibleContainer = document.getElementById('visible-container');
+  const visibleContainer = document.getElementById('visible-container');
+  const thermalContainer = document.getElementById('thermal-container');
+  const step1El = document.getElementById('step-1');
+  const step2El = document.getElementById('step-2');
+  const step3El = document.getElementById('step-3');
 
   let selectedPoints = [];
   let hoverPoint = null;
+  let pointsChanged = false;
+  const clickHintA = document.getElementById('click-hint-a');
 
   const imagePairs = [
     { name: "Case 1", visible: "static/images/5_vis.png", thermal: "static/images/5_thr.png" },
@@ -29,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.className = 'button is-light';
     btn.textContent = pair.name;
     btn.addEventListener('click', () => {
+      visibleImage.crossOrigin = 'anonymous';
+      thermalImage.crossOrigin = 'anonymous';
       visibleImage.src = pair.visible;
       thermalImage.src = pair.thermal;
       selectedPoints = [];
@@ -127,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const y = (event.clientY - rect.top);
     selectedPoints.push({ x, y });
     if (selectedPoints.length > 2) selectedPoints = selectedPoints.slice(-2);
+    pointsChanged = true;
     updateAll();
   }
 
@@ -146,6 +155,43 @@ document.addEventListener('DOMContentLoaded', function() {
     updateAll();
   }
 
+  // Update step progress guide
+  function updateStepIndicators() {
+    const n = selectedPoints.length;
+    [step1El, step2El, step3El].forEach(s => s.classList.remove('active', 'done'));
+    if (n === 0) {
+      // Restore hint to center with "Click Point A"
+      if (clickHintA) {
+        clickHintA.classList.remove('hidden', 'moved');
+        clickHintA.querySelector('.click-hint-label').textContent = 'Click Point A';
+      }
+      step1El.classList.add('active');
+      visibleContainer.classList.add('awaiting');
+      thermalContainer.classList.add('awaiting');
+    } else if (n === 1) {
+      // Slide hint to a new spot on the same image, suggest Point B
+      if (clickHintA) {
+        clickHintA.classList.remove('hidden');
+        clickHintA.classList.add('moved');
+        clickHintA.querySelector('.click-hint-label').textContent = 'Click Point B';
+      }
+      step1El.classList.add('done');
+      step2El.classList.add('active');
+      visibleContainer.classList.add('awaiting');
+      thermalContainer.classList.add('awaiting');
+    } else {
+      // Both points placed — hide hint completely
+      if (clickHintA) clickHintA.classList.add('hidden');
+      step1El.classList.add('done');
+      step2El.classList.add('done');
+      step3El.classList.add('done');
+      // Re-activate step 1 to signal the user can pick a new pair
+      step1El.classList.add('active');
+      visibleContainer.classList.add('awaiting');
+      thermalContainer.classList.add('awaiting');
+    }
+  }
+
   // Update everything
   function updateAll() {
     syncCanvasToImage(visibleCanvas, visibleImage);
@@ -154,51 +200,85 @@ document.addEventListener('DOMContentLoaded', function() {
     redrawCanvas(thermalCanvas.getContext('2d'), selectedPoints, hoverPoint, 'A', 'B');
     // Ordinality info
     if (selectedPoints.length === 2) {
+      // Only recompute & re-animate when points actually changed (not on every mouse move)
+      if (pointsChanged) {
+        pointInfo.style.animation = 'none';
+        pointInfo.offsetHeight; // trigger reflow
+        pointInfo.style.animation = '';
+
+        const visA = getImageIntensity(visibleImage, selectedPoints[0].x, selectedPoints[0].y);
+        const visB = getImageIntensity(visibleImage, selectedPoints[1].x, selectedPoints[1].y);
+        const thermA = getImageIntensity(thermalImage, selectedPoints[0].x, selectedPoints[0].y);
+        const thermB = getImageIntensity(thermalImage, selectedPoints[1].x, selectedPoints[1].y);
+
+        // Use >= so ties (equal intensities) are assigned to the ">" side
+        const visGte  = visA  >= visB;
+        const thermGte = thermA >= thermB;
+        const visSignHtml   = visGte  ? '&gt;' : '&lt;';
+        const thermSignHtml = thermGte ? '&gt;' : '&lt;';
+        const sameSign = visGte === thermGte;
+        const conclusionType     = sameSign ? 'Shading' : 'Albedo';
+        const conclusionSignHtml = visGte ? '&gt;' : '&lt;';
+        const reasonText = sameSign
+          ? 'Same ordering in both channels'
+          : 'Opposite ordering across channels';
+
+        const infoHTML = `
+          <div class="oc-card">
+            <!-- Premises + merge bracket wrapper -->
+            <div class="oc-premises-block">
+              <div class="oc-premises">
+                <div class="oc-premise">
+                  <span class="oc-ch-tag">Visible</span>
+                  <span class="oc-order-expr">
+                    ${redCircleSVG(13)}
+                    <span class="oc-sign-lg">${visSignHtml}</span>
+                    ${blueSquareSVG(13)}
+                  </span>
+                </div>
+                <div class="oc-premise">
+                  <span class="oc-ch-tag">Thermal</span>
+                  <span class="oc-order-expr">
+                    ${redCircleSVG(13)}
+                    <span class="oc-sign-lg">${thermSignHtml}</span>
+                    ${blueSquareSVG(13)}
+                  </span>
+                </div>
+              </div>
+              <div class="oc-merge">
+                <div class="oc-merge-arm oc-merge-l"></div>
+                <div class="oc-merge-arm oc-merge-r"></div>
+              </div>
+            </div>
+
+            <!-- Causal connector -->
+            <div class="oc-causal">
+              <div class="oc-causal-stem"></div>
+              <span class="oc-causal-badge ${sameSign ? 'oc-badge-same' : 'oc-badge-opp'}">
+                ${reasonText}
+              </span>
+              <div class="oc-causal-stem"></div>
+              <div class="oc-causal-arrow-down">▼</div>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="oc-conclusion ${sameSign ? 'oc-shading' : 'oc-albedo'}">
+              ∴ &nbsp;<strong>${conclusionType}</strong> ordinality: &nbsp;
+              ${redCircleSVG(14)}&nbsp;${conclusionSignHtml}&nbsp;${blueSquareSVG(14)}
+            </div>
+          </div>
+          <p class="demo-next-hint">Click anywhere on the images to pick a new pair</p>
+        `;
+        pointACoords.innerHTML = '';
+        pointBCoords.innerHTML = '';
+        ordinalityResult.innerHTML = infoHTML;
+        pointsChanged = false;
+      }
       pointInfo.classList.remove('is-hidden');
-      // pointACoords.textContent = `Visible: (${Math.round(selectedPoints[0].x)}, ${Math.round(selectedPoints[0].y)}) | Thermal: (${Math.round(selectedPoints[0].x)}, ${Math.round(selectedPoints[0].y)})`;
-      // pointBCoords.textContent = `Visible: (${Math.round(selectedPoints[1].x)}, ${Math.round(selectedPoints[1].y)}) | Thermal: (${Math.round(selectedPoints[1].x)}, ${Math.round(selectedPoints[1].y)})`;
-      // Calculate ordinality
-      const visA = getImageIntensity(visibleImage, selectedPoints[0].x, selectedPoints[0].y);
-      const visB = getImageIntensity(visibleImage, selectedPoints[1].x, selectedPoints[1].y);
-      const thermA = getImageIntensity(thermalImage, selectedPoints[0].x, selectedPoints[0].y);
-      const thermB = getImageIntensity(thermalImage, selectedPoints[1].x, selectedPoints[1].y);
-      // Format: Visible intensity: A = 12 < B = 34
-      const visAVal = isNaN(visA) ? 'N/A' : Math.round(visA);
-      const visBVal = isNaN(visB) ? 'N/A' : Math.round(visB);
-      const thermAVal = isNaN(thermA) ? 'N/A' : Math.round(thermA);
-      const thermBVal = isNaN(thermB) ? 'N/A' : Math.round(thermB);
-      const visSign = (visAVal !== 'N/A' && visBVal !== 'N/A') ? (visA > visB ? '>' : (visA < visB ? '<' : '=')) : '';
-      const thermSign = (thermAVal !== 'N/A' && thermBVal !== 'N/A') ? (thermA > thermB ? '>' : (thermA < thermB ? '<' : '=')) : '';
-      const visLabel = 'Visible intensity:';
-      const thermLabel = 'Thermal intensity:';
-      const maxLabelLen = Math.max(visLabel.length, thermLabel.length);
-
-      const visLabelPad = visLabel.padEnd(maxLabelLen, ' ');
-      const thermLabelPad = thermLabel.padEnd(maxLabelLen, ' ');
-
-      const aPad = String(visAVal).padStart(3, ' ');
-      const bPad = String(visBVal).padStart(3, ' ');
-      const taPad = String(thermAVal).padStart(3, ' ');
-      const tbPad = String(thermBVal).padStart(3, ' ');
-
-      // Compose the info block with larger font
-      const circ = redCircleSVG();
-      const sq = blueSquareSVG();
-      const ordinalityText = calculateOrdinality(visA, visB, thermA, thermB);
-      
-      const infoHTML = `
-        <div class="ordinality-info-text">
-          <pre class="intensity-pre">Visible intensity: ${circ} ${visSign} ${sq}</pre>
-          <pre class="intensity-pre">Thermal intensity: ${circ} ${thermSign} ${sq}</pre>
-          <pre class="intensity-pre"><span style="font-size: 1.8rem;">⇒</span> ${ordinalityText}</pre>
-        </div>
-      `;
-      pointACoords.innerHTML = '';
-      pointBCoords.innerHTML = '';
-      ordinalityResult.innerHTML = infoHTML;
     } else {
       pointInfo.classList.add('is-hidden');
     }
+    updateStepIndicators();
   }
 
   // Initial sync after images load and on resize
@@ -207,22 +287,33 @@ document.addEventListener('DOMContentLoaded', function() {
     syncCanvasToImage(thermalCanvas, thermalImage);
     updateAll();
   }
-  visibleImage.onload = function() {
-    visibleContainer.style.width = visibleImage.naturalWidth + 'px';
-    visibleContainer.style.height = visibleImage.naturalHeight + 'px';
-  };
+  visibleImage.onload = syncAll;
   thermalImage.onload = syncAll;
-  if (visibleImage.complete) syncAll();
-  if (thermalImage.complete) syncAll();
+  if (visibleImage.complete && thermalImage.complete) syncAll();
   window.addEventListener('resize', syncAll);
 
-  // Event listeners
+  // Mouse event listeners
   visibleCanvas.addEventListener('click', e => handleCanvasClick(e, visibleImage));
   thermalCanvas.addEventListener('click', e => handleCanvasClick(e, thermalImage));
   visibleCanvas.addEventListener('mousemove', e => handleCanvasMove(e, visibleImage));
   thermalCanvas.addEventListener('mousemove', e => handleCanvasMove(e, thermalImage));
   visibleCanvas.addEventListener('mouseleave', () => handleCanvasLeave());
   thermalCanvas.addEventListener('mouseleave', () => handleCanvasLeave());
+
+  // Touch support for mobile
+  function handleCanvasTouch(event, image) {
+    event.preventDefault();
+    const touch = event.changedTouches[0];
+    handleCanvasClick({ clientX: touch.clientX, clientY: touch.clientY, target: event.target }, image);
+  }
+  visibleCanvas.addEventListener('touchstart', e => handleCanvasTouch(e, visibleImage), { passive: false });
+  thermalCanvas.addEventListener('touchstart', e => handleCanvasTouch(e, thermalImage), { passive: false });
+
+  // Reset button
+  document.getElementById('reset-btn').addEventListener('click', () => {
+    selectedPoints = [];
+    updateAll();
+  });
 
   function redCircleSVG(size = 14) {
     return `<svg width="${size}" height="${size}" style="vertical-align:middle"><circle cx="${size/2}" cy="${size/2}" r="${size/2-2}" fill="none" stroke="red" stroke-width="2"/></svg>`;

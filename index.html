@@ -49,8 +49,8 @@
 <body>
 
 
-  <section class="hero">
-    <div class="hero-body">
+  <section class="hero" style="padding-bottom: 0; margin-bottom: 0;">
+    <div class="hero-body" style="padding-bottom: 0rem;">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
@@ -84,29 +84,20 @@
             </style>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block" style="margin-right: 1.5rem;">
-                <a href="https://zqyuan.com" target="_blank" class="author-link">Zeqing Leo Yuan</a></span>
-                <span class="author-block" style="margin-right: 1.5rem;">
-                  <a href="https://marvils.org/mani" target="_blank" class="author-link">Mani Ramanagopal</a></span>
-                  <span class="author-block" style="margin-right: 1.5rem;">
-                    <a href="https://users.ece.cmu.edu/~saswin/" target="_blank" class="author-link">Aswin C. Sankaranarayanan</a></span>
-                    <span class="author-block">
-                    <a href="https://www.cs.cmu.edu/~srinivas/" target="_blank" class="author-link">Srinivasa G. Narasimhan</a>
-                  </span>
-                  </div>
-
+              <span class="author-block" style="margin-right: 1.2rem;"><a href="https://zqyuan.com" target="_blank" class="author-link">Zeqing (Leo) Yuan</a></span><span class="author-block" style="margin-right: 1.2rem;"><a href="https://marvils.org/mani" target="_blank" class="author-link">Mani Ramanagopal</a></span><span class="author-block" style="margin-right: 1.2rem;"><a href="https://users.ece.cmu.edu/~saswin/" target="_blank" class="author-link">Aswin C. Sankaranarayanan</a></span><span class="author-block"><a href="https://www.cs.cmu.edu/~srinivas/" target="_blank" class="author-link">Srinivasa G. Narasimhan</a></span>
+              </div>
                   <!-- <div class="is-size-4 publication-authors">
                     <span class="author-block">Carnegie Mellon University<br></span> -->
                   <div class="publication-authors" style="margin-top: 1rem;">
                     <span class="author-block"><img src="static/images/CMU.png" alt="Carnegie Mellon University" style="height: 2rem;"></span>  
                   </div>
 
+                  
                   <div class="is-size-3 publication-authors">
                     <span class="author-block" style="color: #ba6724; letter-spacing: 0.03em; font-weight: 500;">CVPR 2026</span>
                   </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
+                  <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
                         <a href="static/pdfs/VT-Intrinsics_arXiv_v2_compressed.pdf" target="_blank"
@@ -174,7 +165,6 @@
                 </span>
 
             </div>
-          </div>
         </div>
       </div>
     </div>
@@ -183,7 +173,7 @@
 
 
 <!-- Teaser-->
-<section class="hero teaser" style="padding-top: 0rem;">
+<section class="hero teaser" style="padding-top: 2rem; margin-top: 0;">
   <div class="container is-max-widescreen">
     <div class="hero-body" style="padding-top: 0rem; padding-bottom: 0;">
        <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1.2rem; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); margin: 0.5rem 0 2rem 0;">
@@ -205,7 +195,7 @@
         <div style="text-align: center; max-width: 1200px; margin: 0 auto;">
            <p style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 1rem; font-weight: 400;">
              <b>TL;DR:</b> Decomposing scene appearance into reflectance (material albedo) and shading (incident illumination) is a fundamental challenge in vision.
-             What is <i><b>absent</b></i> in the visible image—light not reflected by the scene—is absorbed and manifests as heat in the thermal spectrum, 
+             What is <i><b>absent</b></i> in the visible image—light not reflected by the scene—is absorbed as heat and manifests in the thermal spectrum, 
              which <i><b>presents</b></i> disambiguating cues.
              This work 
              <!-- studies the energy conservation in light-heat transport and  -->
@@ -228,6 +218,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Qualitative Results</h2>
+      <p class="has-text-centered" style="margin-top: 1rem; font-size: 0.9rem; color: #999; font-style: italic;">Key differences are highlighted with bounding boxes.</p>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
@@ -278,7 +269,83 @@
 <!-- End image carousel -->
 
 
-<section class="section hero is-small">
+<!-- Interactive ordinality demo -->
+<section class="section hero is-light">
+  <div class="container">
+    <!-- Section header -->
+    <div class="has-text-centered" style="margin-bottom: 1.5rem;">
+      <h2 class="title is-3" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">
+        Interactive Ordinality Demo <span class="interactive-badge">Interactive</span>
+      </h2>
+      <p class="subtitle is-6" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #6a6a6a; margin-top: 0.5rem; margin-bottom: 0;">
+        Albedo/shading ordinalities, derived purely from the ordinalities of visible-thermal intensities.
+      </p>
+    </div>
+
+    <!-- Step progress guide -->
+    <div class="demo-steps-guide">
+      <div class="demo-step-item" id="step-1">
+        <div class="step-icon-wrap">
+          <svg width="24" height="24" style="display:block"><circle cx="12" cy="12" r="9" fill="none" stroke="crimson" stroke-width="2.5"/></svg>
+        </div>
+        <span class="step-label">Tap Point A</span>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="demo-step-item" id="step-2">
+        <div class="step-icon-wrap">
+          <svg width="24" height="24" style="display:block"><rect x="4" y="4" width="16" height="16" fill="none" stroke="#1a56db" stroke-width="2.5"/></svg>
+        </div>
+        <span class="step-label">Tap Point B</span>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="demo-step-item" id="step-3">
+        <div class="step-icon-wrap">⚡</div>
+        <span class="step-label">See Ordinality</span>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="columns">
+        <div class="column">
+          <h3 class="subtitle is-5 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Visible Image</h3>
+          <div class="image-container" id="visible-container">
+            <img src="static/images/5_vis.png" alt="Visible Image" id="visible-image" class="comparison-image">
+            <canvas id="visible-canvas" class="overlay-canvas"></canvas>
+            <div class="click-hint-overlay" id="click-hint-a">
+              <div class="click-hint-icon">👆</div>
+              <span class="click-hint-label">Click Point A</span>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <h3 class="subtitle is-5 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Thermal Image</h3>
+          <div class="image-container" id="thermal-container">
+            <img src="static/images/5_thr.png" alt="Thermal Image" id="thermal-image" class="comparison-image">
+            <canvas id="thermal-canvas" class="overlay-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result panel (shown after 2 points are selected) -->
+      <div id="point-info" class="is-hidden result-panel">
+        <p><span id="point-a-coords"></span></p>
+        <p><span id="point-b-coords"></span></p>
+        <p><span id="ordinality-result"></span></p>
+        <div class="has-text-centered" style="margin-top: 0.75rem;">
+          <button id="reset-btn" class="button is-light is-small is-rounded">
+            <span class="icon is-small"><i class="fas fa-redo-alt"></i></span>
+            <span>Reset Points</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="buttons is-centered mb-4" id="case-buttons"></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero is-small" style="padding-top: 3cap; padding-bottom: 0;">
   <div class="container is-max-desktop">
     <!-- <div class="columns is-centered"> -->
         <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Ordinality Theory</h2>
@@ -291,7 +358,7 @@
             However, measuring the absorbed heat from light requires capturing thermal transients with a calibrated video under controlled illumination, which is expensive for general application.
           </h3>
           <br>
-          <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">What can we do with a single thermal image?</h3>
+          <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">What can we do with the absorbed heat?</h3>
           <img src="static/images/theory_1.png" alt="theory_1"/>
           <br>
           <h3 class="title is-5" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
@@ -312,45 +379,7 @@
   </div>
 </section>
 
-<!-- Interactive ordinality demo -->
-<section class="section hero is-light">
-  <div class="container">
-    <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Interactive Ordinality Demo</h2>
-    <div class="mt-4">
-      <div id="ordinality-info" class="has-text-centered">
-        <p class="subtitle is-5" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">Click two points on the image to explore albedo/shading ordinalities, derived purely from the ordinalities of visible-thermal intensities.</p>
-        <div id="point-info" class="is-hidden">
-          <p><span id="point-a-coords"></span></p>
-          <p><span id="point-b-coords"></span></p>
-          <p><span id="ordinality-result"></span></p>
-        </div>
-      </div>
-    </div>
-    <div class="box">
-      <div class="columns" style="display: flex; align-items: flex-start;">
-        <div class="column" style="width: 48%;">
-          <h3 class="subtitle is-5 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Visible Image</h3>
-          <div class="image-container" id="visible-container">
-            <img src="static/images/5_vis.png" alt="Visible Image" id="visible-image" class="comparison-image">
-            <canvas id="visible-canvas" class="overlay-canvas"></canvas>
-          </div>
-          <!-- <h5 class="subtitle is-5 has-text-centered">(Gamma corrected)</h5> -->
-        </div>
-        <div class="column" style="width: 48%;">
-          <h3 class="subtitle is-5 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Thermal Image</h3>
-          <div class="image-container" id="thermal-container">
-            <img src="static/images/5_thr.png" alt="Thermal Image" id="thermal-image" class="comparison-image">
-            <canvas id="thermal-canvas" class="overlay-canvas"></canvas>
-          </div>
-        </div>
-      </div>
-    <div class="buttons is-centered mb-4" id="case-buttons"></div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section hero is-small">
+<section class="section hero is-small" style="padding-top: 0;">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Optimization Method</h2>
     <div class="item">
@@ -360,7 +389,8 @@
       <img src="static/images/pipeline.png" alt="pipeline"/>
       <h3 class="title is-5" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
         Our theory enables albedo/shading ordinality queries between arbitrary two points in the image.
-        We densely sample these point-pair ordinalities and thus classify edges as albedo- or shading-dominant, then use these constraints as supervision to optimize randomly initialized CNNs parameterizing albedo and shading (<a href="https://www.wisdom.weizmann.ac.il/~vision/DoubleDIP/" target="_blank">Double-DIP</a>, offering low-level image prior underlying in CNN architecture).
+        We densely sample these point-pair ordinalities and thus classify edges as albedo- or shading-dominant, then use these constraints as supervision to optimize randomly initialized CNNs parameterizing albedo and shading (<a href="https://www.wisdom.weizmann.ac.il/~vision/DoubleDIP/" target="_blank">Double-DIP</a>, offering low-level image prior underlying in network architecture).
+        P.S. This is a per-instance optimization pipeline, rather than using a diffusion model..
       </h3>
       </div>
   </div>
@@ -388,14 +418,14 @@
 
 
 <!-- Paper abstract -->
-<section class="section hero is-small" style="padding-top: 1.5rem; padding-bottom: 1rem;">
+<section class="section hero is-small" style="padding-top: 2rem; padding-bottom: 1rem;">
   <div class="container is-max-desktop">
     <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths"> -->
         <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Abstract</h2>
         <div class="content has-text-justified">
-          <p style="font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.6; color: #4a4a4a; font-weight: 400;">
-            Decomposing an image into its underlying photometric factors—surface reflectance and shading—is a long-standing challenge due to the lack of extensive ground-truth data for real-world scenes. We introduce a novel physics-based approach for intrinsic image decomposition using a pair of visible and thermal images. We leverage the principle that light not reflected from an opaque surface is absorbed and detected as heat by a thermal camera. This allows us to relate the ordinalities (or relative magnitudes) between visible and thermal image intensities to the ordinalities of shading and reflectance, which enables a dense self-supervision of an optimizing neural network to recover shading and reflectance. We perform quantitative evaluations with known reflectance and shading under natural and artificial lighting, and qualitative experiments across diverse scenes. The results demonstrate superior performance over both physics-based and recent learning-based methods, providing a path toward scalable real-world data curation with supervision.
+          <p style="font-family: 'Inter', sans-serif; font-size: 1.2rem; line-height: 1.6; color: #4a4a4a; font-weight: 300;">
+            Decomposing a scene into its reflectance and shading is a challenge due to the lack of extensive ground-truth data for real-world scenes. We introduce a novel physics-based approach for intrinsic image decomposition using a pair of visible and thermal images. We leverage the principle that light not reflected from an opaque surface is absorbed and detected as heat by a thermal camera. This allows us to relate the ordinalities (or relative magnitudes) between visible and thermal image intensities to the ordinalities of shading and reflectance. The ordinalities enable dense self-supervision of an optimizing neural network to recover shading and reflectance. We perform extensive quantitative evaluations with known reflectance and shading under natural and artificial lighting, and qualitative experiments across diverse scenes. The results demonstrate superior performance over both classical physics-based and recent learning-based methods, providing a path toward scalable real-world data curation with supervision. 
           </p>
         </div>
       <!-- </div>
@@ -468,8 +498,8 @@
         </button>
         <pre id="citation-text" style="font-family: 'JetBrains Mono', monospace; margin: 0; padding-right: 50px; background: none; border: none; font-size: 0.9rem; line-height: 1.4;"><code>@inproceedings{yuan2025vt-intrinsic,
   title = {Physics-Based Decomposition of Reflectance and Shading using a Single Visible-Thermal Image Pair}, 
-  author = {Zeqing Leo Yuan and Mani Ramanagopal and Aswin C. Sankaranarayanan and Srinivasa G. Narasimhan},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  author = {Zeqing Yuan and Mani Ramanagopal and Aswin C. Sankaranarayanan and Srinivasa G. Narasimhan},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year = {2026} 
 }
         </code></pre>
