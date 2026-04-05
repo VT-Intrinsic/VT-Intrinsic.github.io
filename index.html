@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="VT-Intrinsic: Physics-based Decomposition of Reflectance and Shading from a Single Visible-Thermal Image Pair">
-  <meta property="og:title" content="VT-Intrinsic"/>
-  <meta property="og:description" content="VT-Intrinsic: Physics-based Decomposition of Reflectance and Shading from a Single Visible-Thermal Image Pair"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta name="description"
+    content="VT-Intrinsic: Physics-based Decomposition of Reflectance and Shading from a Single Visible-Thermal Image Pair">
+  <meta property="og:title" content="VT-Intrinsic" />
+  <meta property="og:description"
+    content="VT-Intrinsic: Physics-based Decomposition of Reflectance and Shading from a Single Visible-Thermal Image Pair" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -20,21 +23,22 @@
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="intrinsic image decomposition, thermal imaging, ordinality, physics-based vision, reflectance, shading">
+  <meta name="keywords"
+    content="intrinsic image decomposition, thermal imaging, ordinality, physics-based vision, reflectance, shading">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
   <title>VT-Intrinsic | CVPR 2026</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-  rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/style.css">
 
@@ -46,6 +50,7 @@
   <script src="static/js/index.js"></script>
   <script src="static/js/main.js"></script>
 </head>
+
 <body>
 
 
@@ -54,10 +59,18 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title" style="font-family: 'Inter', sans-serif; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.1); line-height: 1.2; letter-spacing: -0.02em;">
-              <span style="color: #ffb157; font-weight: 700; text-shadow: 0 0 2px rgba(255,221,87,0.3);">V</span><span style="color: #ff3860; font-weight: 700; text-shadow: 0 0 10px rgba(255,56,96,0.3);">T</span><span style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">-Intrinsic</span>: 
-              <span style="font-weight: 500; color: #4a4a4a;">Physics-based Decomposition of Reflectance and Shading using</span><br>
-              <span style="font-weight: 500; color: #4a4a4a;">a Single</span> <span style="background: linear-gradient(135deg, #ffb157 0%, #ff6b35 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;"><b>V</b>isible</span><span style="color: #4a4a4a; font-weight: 500;">-</span><span style="background: linear-gradient(135deg, #f92e57 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;"><b>T</b>hermal</span><span style="color: #4a4a4a; font-weight: 500;"> Image Pair</span>
+            <h1 class="title is-2 publication-title"
+              style="font-family: 'Inter', sans-serif; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.1); line-height: 1.2; letter-spacing: -0.02em;">
+              <span style="color: #ffb157; font-weight: 700; text-shadow: 0 0 2px rgba(255,221,87,0.3);">V</span><span
+                style="color: #ff3860; font-weight: 700; text-shadow: 0 0 10px rgba(255,56,96,0.3);">T</span><span
+                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">-Intrinsic</span>:
+              <span style="font-weight: 500; color: #4a4a4a;">Physics-based Decomposition of Reflectance and Shading
+                using</span><br>
+              <span style="font-weight: 500; color: #4a4a4a;">a Single</span> <span
+                style="background: linear-gradient(135deg, #ffb157 0%, #ff6b35 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;"><b>V</b>isible</span><span
+                style="color: #4a4a4a; font-weight: 500;">-</span><span
+                style="background: linear-gradient(135deg, #f92e57 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;"><b>T</b>hermal</span><span
+                style="color: #4a4a4a; font-weight: 500;"> Image Pair</span>
             </h1>
             <style>
               .author-link {
@@ -66,9 +79,11 @@
                 font-weight: 500;
                 transition: opacity 0.2s ease;
               }
+
               .author-link:hover {
                 opacity: 0.7;
               }
+
               .external-link.button.is-dark {
                 background-color: #a15965 !important;
                 border-color: transparent !important;
@@ -77,6 +92,7 @@
                 letter-spacing: 0.02em;
                 transition: background-color 0.2s ease, transform 0.15s ease;
               }
+
               .external-link.button.is-dark:hover {
                 background-color: #9c4e5b !important;
                 transform: translateY(-1px);
@@ -84,44 +100,53 @@
             </style>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block" style="margin-right: 1.2rem;"><a href="https://zqyuan.com" target="_blank" class="author-link">Zeqing (Leo) Yuan</a></span><span class="author-block" style="margin-right: 1.2rem;"><a href="https://marvils.org/mani" target="_blank" class="author-link">Mani Ramanagopal</a></span><span class="author-block" style="margin-right: 1.2rem;"><a href="https://users.ece.cmu.edu/~saswin/" target="_blank" class="author-link">Aswin C. Sankaranarayanan</a></span><span class="author-block"><a href="https://www.cs.cmu.edu/~srinivas/" target="_blank" class="author-link">Srinivasa G. Narasimhan</a></span>
-              </div>
-                  <!-- <div class="is-size-4 publication-authors">
+              <span class="author-block" style="margin-right: 1.2rem;"><a href="https://zqyuan.com" target="_blank"
+                  class="author-link">Zeqing (Leo) Yuan</a></span><span class="author-block"
+                style="margin-right: 1.2rem;"><a href="https://marvils.org/mani" target="_blank"
+                  class="author-link">Mani Ramanagopal</a></span><span class="author-block"
+                style="margin-right: 1.2rem;"><a href="https://users.ece.cmu.edu/~saswin/" target="_blank"
+                  class="author-link">Aswin C. Sankaranarayanan</a></span><span class="author-block"><a
+                  href="https://www.cs.cmu.edu/~srinivas/" target="_blank" class="author-link">Srinivasa G.
+                  Narasimhan</a></span>
+            </div>
+            <!-- <div class="is-size-4 publication-authors">
                     <span class="author-block">Carnegie Mellon University<br></span> -->
-                  <div class="publication-authors" style="margin-top: 1rem;">
-                    <span class="author-block"><img src="static/images/CMU.png" alt="Carnegie Mellon University" style="height: 2rem;"></span>  
-                  </div>
+            <div class="publication-authors" style="margin-top: 1rem;">
+              <span class="author-block"><img src="static/images/CMU.png" alt="Carnegie Mellon University"
+                  style="height: 2rem;"></span>
+            </div>
 
-                  
-                  <div class="is-size-3 publication-authors">
-                    <span class="author-block" style="color: #ba6724; letter-spacing: 0.03em; font-weight: 500;">CVPR 2026</span>
-                  </div>
 
-                  <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="static/pdfs/VT-Intrinsics_CVPR26.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-                  
-                    <!-- ArXiv abstract Link -->
-                    <span class="link-block">
-                      <a href="https://arxiv.org/abs/2509.10388" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
+            <div class="is-size-3 publication-authors">
+              <span class="author-block" style="color: #ba6724; letter-spacing: 0.03em; font-weight: 500;">CVPR
+                2026</span>
+            </div>
+
+            <div class="publication-links">
+              <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <a href="static/pdfs/VT-Intrinsic_CVPR26.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
                   </span>
+                  <span>Paper</span>
+                </a>
+              </span>
 
-                    <!-- Poster link -->
-                    <!-- <span class="link-block">
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2509.10388" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Poster link -->
+              <!-- <span class="link-block">
                       <a href="static/pdfs/IID_vis_thr_poster_v5.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -131,274 +156,312 @@
                     </a>
                   </span> -->
 
-                  <!-- Video link -->
-                  <span class="link-block">
-                    <a href="static/videos/VT-Intrinsic_video.mp4" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-play"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span>
+              <!-- Video link -->
+              <span class="link-block">
+                <a href="static/videos/VT-Intrinsic_video.mp4" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-play"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/LeoYuan0111/VT-Intrinsic" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/LeoYuan0111/VT-Intrinsic" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
 
-                  <!-- BibTeX link -->
-                  <span class="link-block">
-                    <a href="#BibTeX"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-quote-right"></i>
-                    </span>
-                    <span>BibTeX</span>
-                  </a>
-                </span>
+              <!-- BibTeX link -->
+              <span class="link-block">
+                <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-quote-right"></i>
+                  </span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
 
             </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Teaser-->
-<section class="hero teaser" style="padding-top: 2rem; margin-top: 0;">
-  <div class="container is-max-widescreen">
-    <div class="hero-body" style="padding-top: 0rem; padding-bottom: 0;">
-       <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1.2rem; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); margin: 0.5rem 0 2rem 0;">
-        
-        <div style="text-align: center; margin-bottom: 1rem;">
-          <h2 class="subtitle" style="font-family: 'Inter', sans-serif; font-style: italic; color: #5a5a5a; font-size: 1.4rem; margin-bottom: 0; font-weight: 400; letter-spacing: 0.01em;">
-            "<b>Absence</b>, the highest form of <b>presence</b>."
-          </h2>
-          <p style="font-family: 'Inter', sans-serif; color: #888; font-size: 1.1rem; margin-top: 0.5rem; font-weight: 400;">— James Joyce</p>
+  <!-- Teaser-->
+  <section class="hero teaser" style="padding-top: 2rem; margin-top: 0;">
+    <div class="container is-max-widescreen">
+      <div class="hero-body" style="padding-top: 0rem; padding-bottom: 0;">
+        <div
+          style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1.2rem; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); margin: 0.5rem 0 2rem 0;">
+
+          <div style="text-align: center; margin-bottom: 1rem;">
+            <h2 class="subtitle"
+              style="font-family: 'Inter', sans-serif; font-style: italic; color: #5a5a5a; font-size: 1.4rem; margin-bottom: 0; font-weight: 400; letter-spacing: 0.01em;">
+              "<b>Absence</b>, the highest form of <b>presence</b>."
+            </h2>
+            <p
+              style="font-family: 'Inter', sans-serif; color: #888; font-size: 1.1rem; margin-top: 0.5rem; font-weight: 400;">
+              — James Joyce</p>
+          </div>
+
+          <!-- Teaser Image -->
+          <div style="text-align: center; margin-bottom: 1rem;">
+            <img src="static/images/VT-Intrinsic_webpage_teaser.png" alt="VT-Intrinsic Method Overview"
+              style="width: 95%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+          </div>
+
+          <!-- Description -->
+          <div style="text-align: center; max-width: 1200px; margin: 0 auto;">
+            <p
+              style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 1rem; font-weight: 400;">
+              <b>TL;DR:</b> Decomposing scene appearance into reflectance (material albedo) and shading (incident
+              illumination) is a fundamental challenge in vision.
+              What is <i><b>absent</b></i> in the visible image—light not reflected by the scene—is absorbed as heat and
+              manifests in the thermal spectrum,
+              which <i><b>presents</b></i> disambiguating cues.
+              This work
+              <!-- studies the energy conservation in light-heat transport and  -->
+              proposes an ordinality-based theory for intrinsic image decomposition to exploit an auxiliary thermal
+              image.
+            </p>
+          </div>
+
         </div>
-
-        <!-- Teaser Image -->
-        <div style="text-align: center; margin-bottom: 1rem;">
-          <img src="static/images/VT-Intrinsic_webpage_teaser.png" alt="VT-Intrinsic Method Overview" 
-               style="width: 95%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
-        </div>
-
-        <!-- Description -->
-        <div style="text-align: center; max-width: 1200px; margin: 0 auto;">
-           <p style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 1rem; font-weight: 400;">
-             <b>TL;DR:</b> Decomposing scene appearance into reflectance (material albedo) and shading (incident illumination) is a fundamental challenge in vision.
-             What is <i><b>absent</b></i> in the visible image—light not reflected by the scene—is absorbed as heat and manifests in the thermal spectrum, 
-             which <i><b>presents</b></i> disambiguating cues.
-             This work 
-             <!-- studies the energy conservation in light-heat transport and  -->
-             proposes an ordinality-based theory for intrinsic image decomposition to exploit an auxiliary thermal image.
-           </p>
-        </div>
-        
-      </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+    </div>
+  </section>
+  <!-- End teaser video -->
 
 
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Qualitative Results</h2>
-      <p class="has-text-centered" style="margin-top: 1rem; font-size: 0.9rem; color: #999; font-style: italic;">Key differences are highlighted with bounding boxes.</p>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/qualitative_results/1_165446.png" alt="MY ALT TEXT" style="width: 90%; height: auto; display: block; margin: 0 auto;"/>
-        <!-- <h2 class="subtitle has-text-centered">
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered"
+          style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Qualitative Results</h2>
+        <p class="has-text-centered" style="margin-top: 1rem; font-size: 0.9rem; color: #999; font-style: italic;">Key
+          differences are highlighted with bounding boxes.</p>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/qualitative_results/1_165446.png" alt="MY ALT TEXT"
+              style="width: 90%; height: auto; display: block; margin: 0 auto;" />
+            <!-- <h2 class="subtitle has-text-centered">
           Case 1
         </h2> -->
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/qualitative_results/3_122324.png" alt="MY ALT TEXT" style="width: 90%; height: auto; display: block; margin: 0 auto;"/>
-        <!-- <h2 class="subtitle has-text-centered">
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/qualitative_results/3_122324.png" alt="MY ALT TEXT"
+              style="width: 90%; height: auto; display: block; margin: 0 auto;" />
+            <!-- <h2 class="subtitle has-text-centered">
           Case 2
         </h2> -->
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/qualitative_results/2_162020.png" alt="MY ALT TEXT" style="width: 90%; height: auto; display: block; margin: 0 auto;"/>
-        <!-- <h2 class="subtitle has-text-centered">
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/qualitative_results/2_162020.png" alt="MY ALT TEXT"
+              style="width: 90%; height: auto; display: block; margin: 0 auto;" />
+            <!-- <h2 class="subtitle has-text-centered">
           Case 3
        </h2> -->
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/qualitative_results/4_133654.png" alt="MY ALT TEXT" style="width: 90%; height: auto; display: block; margin: 0 auto;"/>
-        <!-- <h2 class="subtitle has-text-centered">
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/qualitative_results/4_133654.png" alt="MY ALT TEXT"
+              style="width: 90%; height: auto; display: block; margin: 0 auto;" />
+            <!-- <h2 class="subtitle has-text-centered">
           Case 4
         </h2> -->
-      </div>
-      <div class="item">
-       <!-- Your image here -->
-       <img src="static/images/qualitative_results/5_150500.png" alt="MY ALT TEXT" style="width: 90%; height: auto; display: block; margin: 0 auto;"/>
-       <!-- <h2 class="subtitle has-text-centered">
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/qualitative_results/5_150500.png" alt="MY ALT TEXT"
+              style="width: 90%; height: auto; display: block; margin: 0 auto;" />
+            <!-- <h2 class="subtitle has-text-centered">
          Case 5
        </h2> -->
-      </div>
-      <div class="item">
-       <!-- Your image here -->
-       <img src="static/images/qualitative_results/6_161634.png" alt="MY ALT TEXT" style="width: 90%; height: auto; display: block; margin: 0 auto;"/>
-       <!-- <h2 class="subtitle has-text-centered">
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/qualitative_results/6_161634.png" alt="MY ALT TEXT"
+              style="width: 90%; height: auto; display: block; margin: 0 auto;" />
+            <!-- <h2 class="subtitle has-text-centered">
          Case 6
        </h2> -->
-      </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-<!-- Interactive ordinality demo -->
-<section class="section hero is-light">
-  <div class="container">
-    <!-- Section header -->
-    <div class="has-text-centered" style="margin-bottom: 1.5rem;">
-      <h2 class="title is-3" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">
-        Interactive Ordinality Demo <span class="interactive-badge">Interactive</span>
-      </h2>
-      <p class="subtitle is-6" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #6a6a6a; margin-top: 0.5rem; margin-bottom: 0;">
-        Albedo/shading ordinalities, derived purely from the ordinalities of visible-thermal intensities.
-      </p>
-    </div>
-
-    <!-- Step progress guide -->
-    <div class="demo-steps-guide">
-      <div class="demo-step-item" id="step-1">
-        <div class="step-icon-wrap">
-          <svg width="24" height="24" style="display:block"><circle cx="12" cy="12" r="9" fill="none" stroke="crimson" stroke-width="2.5"/></svg>
+          </div>
         </div>
-        <span class="step-label">Tap Point A</span>
-      </div>
-      <div class="step-arrow">→</div>
-      <div class="demo-step-item" id="step-2">
-        <div class="step-icon-wrap">
-          <svg width="24" height="24" style="display:block"><rect x="4" y="4" width="16" height="16" fill="none" stroke="#1a56db" stroke-width="2.5"/></svg>
-        </div>
-        <span class="step-label">Tap Point B</span>
-      </div>
-      <div class="step-arrow">→</div>
-      <div class="demo-step-item" id="step-3">
-        <div class="step-icon-wrap">⚡</div>
-        <span class="step-label">See Ordinality</span>
       </div>
     </div>
+  </section>
+  <!-- End image carousel -->
 
-    <div class="box">
-      <div class="columns">
-        <div class="column">
-          <h3 class="subtitle is-5 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Visible Image</h3>
-          <div class="image-container" id="visible-container">
-            <img src="static/images/5_vis.png" alt="Visible Image" id="visible-image" class="comparison-image">
-            <canvas id="visible-canvas" class="overlay-canvas"></canvas>
-            <div class="click-hint-overlay" id="click-hint-a">
-              <div class="click-hint-icon">👆</div>
-              <span class="click-hint-label">Click Point A</span>
+
+  <!-- Interactive ordinality demo -->
+  <section class="section hero is-light">
+    <div class="container">
+      <!-- Section header -->
+      <div class="has-text-centered" style="margin-bottom: 1.5rem;">
+        <h2 class="title is-3"
+          style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">
+          Interactive Ordinality Demo <span class="interactive-badge">Interactive</span>
+        </h2>
+        <p class="subtitle is-6"
+          style="font-family: 'Inter', sans-serif; font-weight: 400; color: #6a6a6a; margin-top: 0.5rem; margin-bottom: 0;">
+          Albedo/shading ordinalities, derived purely from the ordinalities of visible-thermal intensities.
+        </p>
+      </div>
+
+      <!-- Step progress guide -->
+      <div class="demo-steps-guide">
+        <div class="demo-step-item" id="step-1">
+          <div class="step-icon-wrap">
+            <svg width="24" height="24" style="display:block">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="crimson" stroke-width="2.5" />
+            </svg>
+          </div>
+          <span class="step-label">Tap Point A</span>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="demo-step-item" id="step-2">
+          <div class="step-icon-wrap">
+            <svg width="24" height="24" style="display:block">
+              <rect x="4" y="4" width="16" height="16" fill="none" stroke="#1a56db" stroke-width="2.5" />
+            </svg>
+          </div>
+          <span class="step-label">Tap Point B</span>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="demo-step-item" id="step-3">
+          <div class="step-icon-wrap">⚡</div>
+          <span class="step-label">See Ordinality</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="columns">
+          <div class="column">
+            <h3 class="subtitle is-5 has-text-centered"
+              style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Visible Image</h3>
+            <div class="image-container" id="visible-container">
+              <img src="static/images/5_vis.png" alt="Visible Image" id="visible-image" class="comparison-image">
+              <canvas id="visible-canvas" class="overlay-canvas"></canvas>
+              <div class="click-hint-overlay" id="click-hint-a">
+                <div class="click-hint-icon">👆</div>
+                <span class="click-hint-label">Click Point A</span>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <h3 class="subtitle is-5 has-text-centered"
+              style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Thermal Image</h3>
+            <div class="image-container" id="thermal-container">
+              <img src="static/images/5_thr.png" alt="Thermal Image" id="thermal-image" class="comparison-image">
+              <canvas id="thermal-canvas" class="overlay-canvas"></canvas>
             </div>
           </div>
         </div>
-        <div class="column">
-          <h3 class="subtitle is-5 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Thermal Image</h3>
-          <div class="image-container" id="thermal-container">
-            <img src="static/images/5_thr.png" alt="Thermal Image" id="thermal-image" class="comparison-image">
-            <canvas id="thermal-canvas" class="overlay-canvas"></canvas>
+
+        <!-- Result panel (shown after 2 points are selected) -->
+        <div id="point-info" class="is-hidden result-panel">
+          <p><span id="point-a-coords"></span></p>
+          <p><span id="point-b-coords"></span></p>
+          <p><span id="ordinality-result"></span></p>
+          <div class="has-text-centered" style="margin-top: 0.75rem;">
+            <button id="reset-btn" class="button is-light is-small is-rounded">
+              <span class="icon is-small"><i class="fas fa-redo-alt"></i></span>
+              <span>Reset Points</span>
+            </button>
           </div>
         </div>
-      </div>
 
-      <!-- Result panel (shown after 2 points are selected) -->
-      <div id="point-info" class="is-hidden result-panel">
-        <p><span id="point-a-coords"></span></p>
-        <p><span id="point-b-coords"></span></p>
-        <p><span id="ordinality-result"></span></p>
-        <div class="has-text-centered" style="margin-top: 0.75rem;">
-          <button id="reset-btn" class="button is-light is-small is-rounded">
-            <span class="icon is-small"><i class="fas fa-redo-alt"></i></span>
-            <span>Reset Points</span>
-          </button>
-        </div>
+        <div class="buttons is-centered mb-4" id="case-buttons"></div>
       </div>
-
-      <div class="buttons is-centered mb-4" id="case-buttons"></div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="section hero is-small" style="padding-top: 3cap; padding-bottom: 0;">
-  <div class="container is-max-desktop">
-    <!-- <div class="columns is-centered"> -->
-        <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Ordinality Theory</h2>
-        <div class="item">
-          <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">How light and heat transport reveals reflectance and shading cues?</h3>
-          <img src="static/images/theory_0.png" alt="theory_0"/>
-          <br>
-          <h3 class="title is-5" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
-            Given the absorbed heat (𝑆), intrinsic image decomposition becomes well-posed [<a href="https://imaging.cs.cmu.edu/joint_light_heat_transport/" target="_blank">JoLHT-Video</a>].<br>
-            However, measuring the absorbed heat from light requires capturing thermal transients with a calibrated video under controlled illumination, which is expensive for general application.
-          </h3>
-          <br>
-          <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">What can we do with the absorbed heat?</h3>
-          <img src="static/images/theory_1.png" alt="theory_1"/>
-          <br>
-          <h3 class="title is-5" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
-            The light and heat transport equations reveal albedo/shading ordinalities of arbitrary point pairs.
-          </h3>
-          <br>
-          <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">
-            How these ordinalities bridge a thermal image and absorbed heat?
-          </h3>
-          <img src="static/images/theory_2.png" alt="theory_2"/>
-          <h3 class="title is-5" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
-            Hence, albedo/shading ordinalities are preserved when substituting absorbed heat with thermal image intensity.
-            This enables extracting rich ordinality information from a single thermal image, eliminating the need for transient thermal video under controlled illumination. (Details in <a href="static/pdfs/VT-Intrinsics_CVPR26.pdf" target="_blank">paper</a>.)
-          </h3>
-          <br>
-         </div>
-    <!-- </div> -->
-  </div>
-</section>
-
-<section class="section hero is-small" style="padding-top: 0;">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Optimization Method</h2>
-    <div class="item">
-      <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">
-        How these ordinalities enable intrinsic image decomposition?
-      </h3>
-      <img src="static/images/pipeline.png" alt="pipeline"/>
-      <h3 class="title is-5" style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
-        Our theory enables albedo/shading ordinality queries between arbitrary two points in the image.
-        We densely sample these point-pair ordinalities and thus classify edges as albedo- or shading-dominant, then use these constraints as supervision to optimize randomly initialized CNNs parameterizing albedo and shading (<a href="https://www.wisdom.weizmann.ac.il/~vision/DoubleDIP/" target="_blank">Double-DIP</a>, offering low-level image prior underlying in network architecture).
-        P.S. This is a per-instance optimization pipeline, rather than using a diffusion model..
-      </h3>
+  <section class="section hero is-small" style="padding-top: 3cap; padding-bottom: 0;">
+    <div class="container is-max-desktop">
+      <!-- <div class="columns is-centered"> -->
+      <h2 class="title is-3 has-text-centered"
+        style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Ordinality Theory</h2>
+      <div class="item">
+        <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">How light and
+          heat transport reveals reflectance and shading cues?</h3>
+        <img src="static/images/theory_0.png" alt="theory_0" />
+        <br>
+        <h3 class="title is-5"
+          style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
+          Given the absorbed heat (𝑆), intrinsic image decomposition becomes well-posed [<a
+            href="https://imaging.cs.cmu.edu/joint_light_heat_transport/" target="_blank">JoLHT-Video</a>].<br>
+          However, measuring the absorbed heat from light requires capturing thermal transients with a calibrated video
+          under controlled illumination, which is expensive for general application.
+        </h3>
+        <br>
+        <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">What can we
+          do with the absorbed heat?</h3>
+        <img src="static/images/theory_1.png" alt="theory_1" />
+        <br>
+        <h3 class="title is-5"
+          style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
+          The light and heat transport equations reveal albedo/shading ordinalities of arbitrary point pairs.
+        </h3>
+        <br>
+        <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">
+          How these ordinalities bridge a thermal image and absorbed heat?
+        </h3>
+        <img src="static/images/theory_2.png" alt="theory_2" />
+        <h3 class="title is-5"
+          style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
+          Hence, albedo/shading ordinalities are preserved when substituting absorbed heat with thermal image intensity.
+          This enables extracting rich ordinality information from a single thermal image, eliminating the need for
+          transient thermal video under controlled illumination. (Details in <a
+            href="static/pdfs/VT-Intrinsic_CVPR26.pdf" target="_blank">paper</a>.)
+        </h3>
+        <br>
       </div>
-  </div>
-</section>
+      <!-- </div> -->
+    </div>
+  </section>
+
+  <section class="section hero is-small" style="padding-top: 0;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered"
+        style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Optimization Method</h2>
+      <div class="item">
+        <h3 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">
+          How these ordinalities enable intrinsic image decomposition?
+        </h3>
+        <img src="static/images/pipeline.png" alt="pipeline" />
+        <h3 class="title is-5"
+          style="font-family: 'Inter', sans-serif; font-weight: 400; color: #4a4a4a; line-height: 1.5;">
+          Our theory enables albedo/shading ordinality queries between arbitrary two points in the image.
+          We densely sample these point-pair ordinalities and thus classify edges as albedo- or shading-dominant, then
+          use these constraints as supervision to optimize randomly initialized CNNs parameterizing albedo and shading
+          (<a href="https://www.wisdom.weizmann.ac.il/~vision/DoubleDIP/" target="_blank">Double-DIP</a>, offering
+          low-level image prior underlying in network architecture).
+          P.S. This is a per-instance optimization pipeline, rather than using a diffusion model..
+        </h3>
+      </div>
+    </div>
+  </section>
 
 
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Video Presentation</h2>
@@ -413,30 +476,41 @@
     </div>
   </div>
 </section> -->
-<!-- End youtube video -->
+  <!-- End youtube video -->
 
 
 
-<!-- Paper abstract -->
-<section class="section hero is-small" style="padding-top: 2rem; padding-bottom: 1rem;">
-  <div class="container is-max-desktop">
-    <!-- <div class="columns is-centered has-text-centered">
+  <!-- Paper abstract -->
+  <section class="section hero is-small" style="padding-top: 2rem; padding-bottom: 1rem;">
+    <div class="container is-max-desktop">
+      <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths"> -->
-        <h2 class="title is-3 has-text-centered" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Abstract</h2>
-        <div class="content has-text-justified">
-          <p style="font-family: 'Inter', sans-serif; font-size: 1.2rem; line-height: 1.6; color: #4a4a4a; font-weight: 300;">
-            Decomposing a scene into its reflectance and shading is a challenge due to the lack of extensive ground-truth data for real-world scenes. We introduce a novel physics-based approach for intrinsic image decomposition using a pair of visible and thermal images. We leverage the principle that light not reflected from an opaque surface is absorbed and detected as heat by a thermal camera. This allows us to relate the ordinalities (or relative magnitudes) between visible and thermal image intensities to the ordinalities of shading and reflectance. The ordinalities enable dense self-supervision of an optimizing neural network to recover shading and reflectance. We perform extensive quantitative evaluations with known reflectance and shading under natural and artificial lighting, and qualitative experiments across diverse scenes. The results demonstrate superior performance over both classical physics-based and recent learning-based methods, providing a path toward scalable real-world data curation with supervision. 
-          </p>
-        </div>
+      <h2 class="title is-3 has-text-centered"
+        style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Abstract</h2>
+      <div class="content has-text-justified">
+        <p
+          style="font-family: 'Inter', sans-serif; font-size: 1.2rem; line-height: 1.6; color: #4a4a4a; font-weight: 300;">
+          Decomposing a scene into its reflectance and shading is a challenge due to the lack of extensive ground-truth
+          data for real-world scenes. We introduce a novel physics-based approach for intrinsic image decomposition
+          using a pair of visible and thermal images. We leverage the principle that light not reflected from an opaque
+          surface is absorbed and detected as heat by a thermal camera. This allows us to relate the ordinalities (or
+          relative magnitudes) between visible and thermal image intensities to the ordinalities of shading and
+          reflectance. The ordinalities enable dense self-supervision of an optimizing neural network to recover shading
+          and reflectance. We perform extensive quantitative evaluations with known reflectance and shading under
+          natural and artificial lighting, and qualitative experiments across diverse scenes. The results demonstrate
+          superior performance over both classical physics-based and recent learning-based methods, providing a path
+          toward scalable real-world data curation with supervision.
+        </p>
+      </div>
       <!-- </div>
     </div> -->
-  </div>
-</section>
-<!-- End paper abstract -->
+    </div>
+  </section>
+  <!-- End paper abstract -->
 
 
-<!-- Paper poster -->
-<!-- <section class="hero is-small">
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title has-text-centered">Poster</h2>
@@ -445,12 +519,12 @@
       </div>
     </div>
   </section> -->
-<!--End paper poster -->
+  <!--End paper poster -->
 
 
 
-<!-- Reference -->
-<!-- <section class="section hero is-small">
+  <!-- Reference -->
+  <!-- <section class="section hero is-small">
   <div class="container is-max-desktop">
         <h3 class="title is-4">Reference</h3>
         <div class="content has-text-justified">
@@ -486,17 +560,19 @@
 
 
 
-<!--BibTex citation -->
+  <!--BibTex citation -->
   <section class="section" id="BibTeX" style="padding-top: 1.5rem; padding-bottom: 1rem;">
     <div class="container is-max-desktop content">
       <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Citation</h2>
       <div style="position: relative; background-color: #f5f5f5; padding: 1rem; border-radius: 6px;">
-        <button id="copy-citation-btn" class="button is-small is-pulled-right" style="position: absolute; top: 10px; right: 10px; z-index: 10;" onclick="copyCitation()">
+        <button id="copy-citation-btn" class="button is-small is-pulled-right"
+          style="position: absolute; top: 10px; right: 10px; z-index: 10;" onclick="copyCitation()">
           <span class="icon">
             <i class="fas fa-copy"></i>
           </span>
         </button>
-        <pre id="citation-text" style="font-family: 'JetBrains Mono', monospace; margin: 0; padding-right: 50px; background: none; border: none; font-size: 0.9rem; line-height: 1.4;"><code>@inproceedings{yuan2025vt-intrinsic,
+        <pre id="citation-text"
+          style="font-family: 'JetBrains Mono', monospace; margin: 0; padding-right: 50px; background: none; border: none; font-size: 0.9rem; line-height: 1.4;"><code>@inproceedings{yuan2025vt-intrinsic,
   title = {VT-Intrinsic: Physics-Based Decomposition of Reflectance and Shading using a Single Visible-Thermal Image Pair}, 
   author = {Zeqing Yuan and Mani Ramanagopal and Aswin C. Sankaranarayanan and Srinivasa G. Narasimhan},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
@@ -506,86 +582,93 @@
       </div>
     </div>
   </section>
-<!--End BibTex citation -->
+  <!--End BibTex citation -->
 
-<section class="section hero is-small" style="padding-top: 1rem; padding-bottom: 1rem;">
-  <div class="container is-max-desktop">
-    <!-- <div class="columns is-centered has-text-centered">
+  <section class="section hero is-small" style="padding-top: 1rem; padding-bottom: 1rem;">
+    <div class="container is-max-desktop">
+      <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths"> -->
-        <h2 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Acknowledgments</h2>
-        <div class="content has-text-justified">
-          <p style="font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.6; color: #4a4a4a; font-weight: 400;">
-            This work was partly supported by NSF grants IIS210723, and NSF-NIFA AI Institute for Resilient Agriculture.
-            We are sincerely grateful to Akihiko Oharazawa for his help with expert annotation, and to Sriram Narayanan and Gaurav Parmar for their insightful discussions.
-          </p>
-        </div>
+      <h2 class="title is-4" style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50;">Acknowledgments
+      </h2>
+      <div class="content has-text-justified">
+        <p
+          style="font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.6; color: #4a4a4a; font-weight: 400;">
+          This work was partly supported by NSF grants IIS210723, and NSF-NIFA AI Institute for Resilient Agriculture.
+          We are sincerely grateful to Akihiko Oharazawa for his help with expert annotation, and to Sriram Narayanan
+          and Gaurav Parmar for their insightful discussions.
+        </p>
+      </div>
       <!-- </div>
     </div> -->
-  </div>
-</section>
+    </div>
+  </section>
 
-<div style="display: none;">
-  <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=2sfPs30m5ae1yTKBwO42x_ZaAXQ96jZjosVxeZpvnA4&cl=ffffff&w=a"></script>
-</div>
+  <div style="display: none;">
+    <script type="text/javascript" id="mapmyvisitors"
+      src="//mapmyvisitors.com/map.js?d=2sfPs30m5ae1yTKBwO42x_ZaAXQ96jZjosVxeZpvnA4&cl=ffffff&w=a"></script>
+  </div>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #6c757d; font-weight: 400;">
-            Webpage template credit: <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, <a href="https://nerfies.github.io" target="_blank">Nerfies</a>.
-          </p>
+            <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #6c757d; font-weight: 400;">
+              Webpage template credit: <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a>, <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-    <!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-<script>
-function copyCitation() {
-  const citationText = document.getElementById('citation-text').textContent;
-  const copyBtn = document.getElementById('copy-citation-btn');
-  
-  navigator.clipboard.writeText(citationText).then(function() {
-    // Change button to show success
-    copyBtn.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span>';
-    copyBtn.classList.add('is-success');
-    
-    // Reset button after 2 seconds
-    setTimeout(function() {
-      copyBtn.innerHTML = '<span class="icon"><i class="fas fa-copy"></i></span>';
-      copyBtn.classList.remove('is-success');
-    }, 2000);
-  }).catch(function(err) {
-    console.error('Failed to copy citation: ', err);
-    // Fallback for older browsers
-    const textArea = document.createElement('textarea');
-    textArea.value = citationText;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textArea);
-    
-    // Show success feedback
-    copyBtn.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span>';
-    copyBtn.classList.add('is-success');
-    
-    setTimeout(function() {
-      copyBtn.innerHTML = '<span class="icon"><i class="fas fa-copy"></i></span>';
-      copyBtn.classList.remove('is-success');
-    }, 2000);
-  });
-}
-</script>
+  <!-- End of Statcounter Code -->
 
-  </body>
+  <script>
+    function copyCitation() {
+      const citationText = document.getElementById('citation-text').textContent;
+      const copyBtn = document.getElementById('copy-citation-btn');
+
+      navigator.clipboard.writeText(citationText).then(function () {
+        // Change button to show success
+        copyBtn.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span>';
+        copyBtn.classList.add('is-success');
+
+        // Reset button after 2 seconds
+        setTimeout(function () {
+          copyBtn.innerHTML = '<span class="icon"><i class="fas fa-copy"></i></span>';
+          copyBtn.classList.remove('is-success');
+        }, 2000);
+      }).catch(function (err) {
+        console.error('Failed to copy citation: ', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = citationText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+
+        // Show success feedback
+        copyBtn.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span>';
+        copyBtn.classList.add('is-success');
+
+        setTimeout(function () {
+          copyBtn.innerHTML = '<span class="icon"><i class="fas fa-copy"></i></span>';
+          copyBtn.classList.remove('is-success');
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+
 </html>
