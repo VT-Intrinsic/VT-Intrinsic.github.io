@@ -85,7 +85,7 @@
               }
 
               .external-link.button.is-dark {
-                background-color: #a15965 !important;
+                background-color: #81797a !important;
                 border-color: transparent !important;
                 color: #fff !important;
                 font-weight: 500;
@@ -222,14 +222,12 @@
         <div
           style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1.2rem; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); margin: 0.5rem 0 2rem 0;">
 
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <h2 class="subtitle"
-              style="font-family: 'Inter', sans-serif; font-style: italic; color: #5a5a5a; font-size: 1.4rem; margin-bottom: 0; font-weight: 400; letter-spacing: 0.01em;">
-              "<b>Absence</b>, the highest form of <b>presence</b>."
-            </h2>
+          <!-- Description -->
+          <div style="text-align: center; max-width: 1200px; margin: 0 auto 1rem auto;">
             <p
-              style="font-family: 'Inter', sans-serif; color: #888; font-size: 1.1rem; margin-top: 0.5rem; font-weight: 400;">
-              — James Joyce</p>
+              style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 1rem; font-weight: 400;">
+              <b>TL;DR:</b> Light absorbed, rather than reflected, leaves thermal traces that reveal lighting and material reflectance.
+            </p>
           </div>
 
           <!-- Teaser Image -->
@@ -238,22 +236,28 @@
               style="width: 95%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
           </div>
 
-          <!-- Description -->
-          <div style="text-align: center; max-width: 1200px; margin: 0 auto;">
+          <div style="text-align: center; margin-bottom: 1rem;">
+            <h2 class="subtitle"
+              style="font-family: 'Inter', sans-serif; font-style: italic; color: #5a5a5a; font-size: 1.4rem; margin-bottom: 0; font-weight: 400; letter-spacing: 0.01em;">
+              "<b>Absence</b>, the highest form of <b>presence</b>."
+              <span
+                style="font-style: normal; color: #888; font-size: 1.1rem; font-weight: 400; margin-left: 0.5rem;">— James Joyce</span>
+            </h2>
+          </div>
+          <div style="text-align: center; max-width: 1200px; margin: 0 auto 1rem auto;">
             <p
               style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 1rem; font-weight: 400;">
-              <b>TL;DR:</b> Decomposing scene appearance into reflectance (material albedo) and shading (incident
-              illumination) is a fundamental challenge in vision.
-              What is <i><b>absent</b></i> in the visible image—light not reflected by the scene—is absorbed as heat and
-              manifests in the thermal spectrum,
-              which <i><b>presents</b></i> disambiguating cues.
-              This work
-              <!-- studies the energy conservation in light-heat transport and  -->
-              proposes an ordinality-based theory for intrinsic image decomposition to exploit an auxiliary thermal
-              image.
+              Decomposing scene appearance into reflectance (material albedo) and shading (incident
+                illumination) is a fundamental challenge in vision.
+                What is <i><b>absent</b></i> in the visible image—light not reflected by the scene—is absorbed as heat and
+                manifests in the thermal spectrum,
+                which <i><b>presents</b></i> disambiguating cues.
+                This work
+                <!-- studies the energy conservation in light-heat transport and  -->
+                proposes an ordinality-based theory for intrinsic image decomposition to exploit an auxiliary thermal
+                image.
             </p>
           </div>
-
         </div>
       </div>
     </div>
@@ -472,7 +476,7 @@
           use these constraints as supervision to optimize randomly initialized CNNs parameterizing albedo and shading
           (<a href="https://www.wisdom.weizmann.ac.il/~vision/DoubleDIP/" target="_blank">Double-DIP</a>, offering
           low-level image prior underlying in network architecture).
-          P.S. This is a per-instance optimization pipeline, rather than using a diffusion model..
+          P.S. This is a per-instance optimization pipeline, rather than using a diffusion model.
         </h3>
       </div>
     </div>
