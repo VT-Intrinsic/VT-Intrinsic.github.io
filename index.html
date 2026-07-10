@@ -85,17 +85,19 @@
               }
 
               .external-link.button.is-dark {
-                background-color: #81797a !important;
-                border-color: transparent !important;
+                background: linear-gradient(135deg, #3d3946 0%, #2d3444 100%) !important;
+                border-color: rgba(255, 255, 255, 0.12) !important;
                 color: #fff !important;
                 font-weight: 500;
                 letter-spacing: 0.02em;
-                transition: background-color 0.2s ease, transform 0.15s ease;
+                box-shadow: 0 3px 8px rgba(31, 35, 49, 0.16);
+                transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
               }
 
               .external-link.button.is-dark:hover {
-                background-color: #9c4e5b !important;
+                background: linear-gradient(135deg, #6b4d61 0%, #485079 100%) !important;
                 transform: translateY(-1px);
+                box-shadow: 0 5px 12px rgba(47, 42, 65, 0.25);
               }
             </style>
             <div class="is-size-5 publication-authors">
@@ -215,56 +217,125 @@
   </section>
 
 
-  <!-- Teaser-->
+  <!-- Teaser -->
   <section class="hero teaser" style="padding-top: 2rem; margin-top: 0;">
     <div class="container is-max-widescreen">
       <div class="hero-body" style="padding-top: 0rem; padding-bottom: 0;">
-        <div
-          style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1.2rem; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); margin: 0.5rem 0 2rem 0;">
+        <div class="teaser-card">
+          <div class="teaser-header">
+            <span class="teaser-kicker">TL;DR</span>
+            <p class="teaser-headline">Light absorbed, rather than reflected, leaves thermal traces that reveal
+              lighting and material reflectance.</p>
+          </div>
 
-          <!-- Description -->
-          <div style="text-align: center; max-width: 1200px; margin: 0 auto 1rem auto;">
-            <p
-              style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 1rem; font-weight: 400;">
-              <b>TL;DR:</b> Light absorbed, rather than reflected, leaves thermal traces that reveal lighting and material reflectance.
+          <div class="teaser-visual">
+            <img src="static/images/teaser_VT-Intrinsic_.gif" alt="VT-Intrinsic Method Overview"
+              loading="eager" fetchpriority="high">
+          </div>
+
+          <div class="teaser-footer">
+            <p class="teaser-quote">"<strong>Absence</strong>, the highest form of <strong>presence</strong>."
+              <span class="teaser-attribution">— James Joyce</span>
             </p>
-          </div>
-
-          <!-- Teaser Image -->
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <img src="static/images/VT-Intrinsic_webpage_teaser.png" alt="VT-Intrinsic Method Overview"
-              style="width: 95%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
-          </div>
-
-          <div style="text-align: center; margin-bottom: 1rem;">
-            <h2 class="subtitle"
-              style="font-family: 'Inter', sans-serif; font-style: italic; color: #5a5a5a; font-size: 1.4rem; margin-bottom: 0; font-weight: 400; letter-spacing: 0.01em;">
-              "<b>Absence</b>, the highest form of <b>presence</b>."
-              <span
-                style="font-style: normal; color: #888; font-size: 1.1rem; font-weight: 400; margin-left: 0.5rem;">— James Joyce</span>
-            </h2>
-          </div>
-          <div style="text-align: center; max-width: 1200px; margin: 0 auto 1rem auto;">
-            <p
-              style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.6; color: #4a4a4a; margin-bottom: 1rem; font-weight: 400;">
+            <p class="teaser-description">
               Decomposing scene appearance into reflectance (material albedo) and shading (incident
                 illumination) is a fundamental challenge in vision.
-                What is <i><b>absent</b></i> in the visible image—light not reflected by the scene—is absorbed as heat and
-                manifests in the thermal spectrum,
-                which <i><b>presents</b></i> disambiguating cues.
-                This work
-                <!-- studies the energy conservation in light-heat transport and  -->
-                proposes an ordinality-based theory for intrinsic image decomposition to exploit an auxiliary thermal
-                image.
+              What is <i><strong>absent</strong></i> in the visible image—light not reflected by the scene—is
+              absorbed as heat and manifests in the thermal spectrum, which <i><strong>presents</strong></i>
+              disambiguating cues. This work proposes an ordinality-based theory for intrinsic image decomposition
+              to exploit an auxiliary thermal image.
             </p>
           </div>
         </div>
       </div>
     </div>
-    </div>
   </section>
   <!-- End teaser video -->
 
+
+  
+<!-- Interactive ordinality demo -->
+<section class="section hero is-light">
+  <div class="container">
+    <!-- Section header -->
+    <div class="has-text-centered" style="margin-bottom: 1.5rem;">
+      <h2 class="title is-3"
+        style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">
+        Interactive Ordinality Demo <span class="interactive-badge">Interactive</span>
+      </h2>
+      <p class="subtitle is-6"
+        style="font-family: 'Inter', sans-serif; font-weight: 400; color: #6a6a6a; margin-top: 0.5rem; margin-bottom: 0;">
+        Albedo/shading ordinalities, derived purely from the ordinalities of visible-thermal intensities.
+      </p>
+    </div>
+
+    <!-- Step progress guide -->
+    <div class="demo-steps-guide">
+      <div class="demo-step-item" id="step-1">
+        <div class="step-icon-wrap">
+          <svg width="24" height="24" style="display:block">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="crimson" stroke-width="2.5" />
+          </svg>
+        </div>
+        <span class="step-label">Tap Point A</span>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="demo-step-item" id="step-2">
+        <div class="step-icon-wrap">
+          <svg width="24" height="24" style="display:block">
+            <rect x="4" y="4" width="16" height="16" fill="none" stroke="#1a56db" stroke-width="2.5" />
+          </svg>
+        </div>
+        <span class="step-label">Tap Point B</span>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="demo-step-item" id="step-3">
+        <div class="step-icon-wrap">⚡</div>
+        <span class="step-label">See Ordinality</span>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="columns">
+        <div class="column">
+          <h3 class="subtitle is-5 has-text-centered"
+            style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Visible Image</h3>
+          <div class="image-container" id="visible-container">
+            <img src="static/images/5_vis.png" alt="Visible Image" id="visible-image" class="comparison-image">
+            <canvas id="visible-canvas" class="overlay-canvas"></canvas>
+            <div class="click-hint-overlay" id="click-hint-a">
+              <div class="click-hint-icon">👆</div>
+              <span class="click-hint-label">Click Point A</span>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <h3 class="subtitle is-5 has-text-centered"
+            style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Thermal Image</h3>
+          <div class="image-container" id="thermal-container">
+            <img src="static/images/5_thr.png" alt="Thermal Image" id="thermal-image" class="comparison-image">
+            <canvas id="thermal-canvas" class="overlay-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result panel (shown after 2 points are selected) -->
+      <div id="point-info" class="is-hidden result-panel">
+        <p><span id="point-a-coords"></span></p>
+        <p><span id="point-b-coords"></span></p>
+        <p><span id="ordinality-result"></span></p>
+        <div class="has-text-centered" style="margin-top: 0.75rem;">
+          <button id="reset-btn" class="button is-light is-small is-rounded">
+            <span class="icon is-small"><i class="fas fa-redo-alt"></i></span>
+            <span>Reset Points</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="buttons is-centered mb-4" id="case-buttons"></div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -330,90 +401,6 @@
     </div>
   </section>
   <!-- End image carousel -->
-
-
-  <!-- Interactive ordinality demo -->
-  <section class="section hero is-light">
-    <div class="container">
-      <!-- Section header -->
-      <div class="has-text-centered" style="margin-bottom: 1.5rem;">
-        <h2 class="title is-3"
-          style="font-family: 'Inter', sans-serif; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">
-          Interactive Ordinality Demo <span class="interactive-badge">Interactive</span>
-        </h2>
-        <p class="subtitle is-6"
-          style="font-family: 'Inter', sans-serif; font-weight: 400; color: #6a6a6a; margin-top: 0.5rem; margin-bottom: 0;">
-          Albedo/shading ordinalities, derived purely from the ordinalities of visible-thermal intensities.
-        </p>
-      </div>
-
-      <!-- Step progress guide -->
-      <div class="demo-steps-guide">
-        <div class="demo-step-item" id="step-1">
-          <div class="step-icon-wrap">
-            <svg width="24" height="24" style="display:block">
-              <circle cx="12" cy="12" r="9" fill="none" stroke="crimson" stroke-width="2.5" />
-            </svg>
-          </div>
-          <span class="step-label">Tap Point A</span>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="demo-step-item" id="step-2">
-          <div class="step-icon-wrap">
-            <svg width="24" height="24" style="display:block">
-              <rect x="4" y="4" width="16" height="16" fill="none" stroke="#1a56db" stroke-width="2.5" />
-            </svg>
-          </div>
-          <span class="step-label">Tap Point B</span>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="demo-step-item" id="step-3">
-          <div class="step-icon-wrap">⚡</div>
-          <span class="step-label">See Ordinality</span>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="columns">
-          <div class="column">
-            <h3 class="subtitle is-5 has-text-centered"
-              style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Visible Image</h3>
-            <div class="image-container" id="visible-container">
-              <img src="static/images/5_vis.png" alt="Visible Image" id="visible-image" class="comparison-image">
-              <canvas id="visible-canvas" class="overlay-canvas"></canvas>
-              <div class="click-hint-overlay" id="click-hint-a">
-                <div class="click-hint-icon">👆</div>
-                <span class="click-hint-label">Click Point A</span>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <h3 class="subtitle is-5 has-text-centered"
-              style="font-family: 'Inter', sans-serif; font-weight: 500; color: #2c3e50;">Thermal Image</h3>
-            <div class="image-container" id="thermal-container">
-              <img src="static/images/5_thr.png" alt="Thermal Image" id="thermal-image" class="comparison-image">
-              <canvas id="thermal-canvas" class="overlay-canvas"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <!-- Result panel (shown after 2 points are selected) -->
-        <div id="point-info" class="is-hidden result-panel">
-          <p><span id="point-a-coords"></span></p>
-          <p><span id="point-b-coords"></span></p>
-          <p><span id="ordinality-result"></span></p>
-          <div class="has-text-centered" style="margin-top: 0.75rem;">
-            <button id="reset-btn" class="button is-light is-small is-rounded">
-              <span class="icon is-small"><i class="fas fa-redo-alt"></i></span>
-              <span>Reset Points</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="buttons is-centered mb-4" id="case-buttons"></div>
-      </div>
-    </div>
-  </section>
 
 
   <section class="section hero is-small" style="padding-top: 3cap; padding-bottom: 0;">

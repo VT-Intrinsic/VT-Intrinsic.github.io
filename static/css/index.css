@@ -4,6 +4,10 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #2c3e50;
+  background:
+    radial-gradient(circle at 12% 24%, rgba(255, 210, 145, 0.24), transparent 27rem),
+    radial-gradient(circle at 88% 70%, rgba(194, 204, 255, 0.32), transparent 31rem),
+    linear-gradient(135deg, #f8f9fc 0%, #f3f5fa 100%);
 }
 
 /* Heading hierarchy */
@@ -68,6 +72,134 @@ code, pre, .citation-text {
 
 .teaser {
   font-family: 'Inter', sans-serif;
+  background: transparent;
+}
+
+/* ── Method overview ── */
+.teaser-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 1400px;
+  margin: 0.5rem auto 2rem;
+  padding: clamp(1.25rem, 2.8vw, 2.75rem);
+  border: 1px solid #2d313b;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 7% 0%, rgba(255, 177, 87, 0.3), transparent 34rem),
+    radial-gradient(circle at 96% 94%, rgba(120, 87, 190, 0.34), transparent 34rem),
+    linear-gradient(135deg, #29242b 0%, #202532 52%, #262332 100%);
+  box-shadow: 0 20px 50px rgba(40, 44, 61, 0.24);
+}
+
+.teaser-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.65rem;
+  max-width: 1100px;
+  margin: 0 auto 1.4rem;
+  color: #edf0f4;
+  text-align: center;
+}
+
+.teaser-kicker {
+  flex: 0 0 auto;
+  color: #ffbd73;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.teaser-headline {
+  margin: 0;
+  font-size: clamp(1rem, 1.55vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.55;
+  white-space: nowrap;
+}
+
+.teaser-visual {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 13px;
+  background: #090a0c;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.38);
+}
+
+.teaser-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.teaser-footer {
+  max-width: 1100px;
+  margin: 1.2rem auto 0;
+  text-align: center;
+}
+
+.teaser-quote {
+  margin: 0 0 1rem;
+  color: #d9dce2;
+  font-size: clamp(1.05rem, 1.65vw, 1.35rem);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.teaser-quote strong {
+  color: #fff;
+}
+
+.teaser-attribution {
+  color: #989da8;
+  font-size: 0.88em;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.teaser-description {
+  max-width: 1050px;
+  margin: 0 auto;
+  color: #c5cad3;
+  font-size: clamp(0.98rem, 1.35vw, 1.12rem);
+  line-height: 1.7;
+}
+
+.teaser-description strong {
+  color: #f2f4f7;
+}
+
+@media (max-width: 600px) {
+  .teaser-card {
+    padding: 1.1rem;
+    border-radius: 14px;
+  }
+
+  .teaser-header {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .teaser-kicker {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .teaser-headline {
+    white-space: normal;
+  }
+
+  .teaser-visual {
+    border-radius: 8px;
+  }
+
+  .teaser-attribution {
+    display: block;
+    margin-top: 0.25rem;
+  }
 }
 
 
